@@ -12,6 +12,13 @@ const renderUI = () => {
   const result = buildItemList(cart)
   document.querySelector('.cart tbody').innerHTML = result
 
+  document.querySelectorAll('.remove-item-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      cart.removeItemId(e.currentTarget.dataset['id'])
+      renderUI()
+    })
+  })
+
   document.querySelector('.cart .total-price').textContent = '$' + cart.totalPrice()
 }
 
@@ -39,4 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
     cart.empty()
     renderUI()
   })
+
+  renderUI()
 })

@@ -18,6 +18,10 @@ class Cart {
     }
   }
 
+  removeItemId(id) {
+    this.items = this.items.filter(item => item.id != id)
+  }
+
   totalPrice() {
     return Math.round(this.items.reduce(
       (total, currentItem) => total + currentItem.totalPrice(),
