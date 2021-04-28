@@ -4,8 +4,16 @@ import '@fortawesome/fontawesome-free/css/all.css'
 
 import Cart from './cart'
 import CartItem from './cart-item'
+import { buildItemList } from './ui'
 
 const cart = new Cart()
+
+const renderUI = () => {
+  const result = buildItemList(cart)
+  document.querySelector('.cart tbody').innerHTML = result
+
+  document.querySelector('.cart .total-price').textContent = '$' + cart.totalPrice()
+}
 
 const addToCart = btn => {
   btn.addEventListener('click', (e) => {
@@ -18,10 +26,17 @@ const addToCart = btn => {
     // 加到購物車
     const item = new CartItem({ id, title, price })
     cart.add(item)
+
+    renderUI()
   })
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   const buttons = document.querySelectorAll('.card .btn')
   buttons.forEach(addToCart)
+
+  document.querySelector('.empty-cart').addEventListener('click', () => {
+    cart.empty()
+    renderUI()
+  })
 })
