@@ -14,8 +14,9 @@ const addToCart = btn => {
     const price = parseFloat(card.querySelector('.price')
                                  .textContent
                                  .replace('$', ''))
+    const id = card.dataset['productId']
     // 加到購物車
-    const item = new CartItem({ title, price })
+    const item = new CartItem({ id, title, price })
     cart.add(item)
   })
 }
