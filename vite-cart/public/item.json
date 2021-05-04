@@ -1,0 +1,38 @@
+[
+  {
+    "id": "624946E",
+    "name": "老大",
+    "price": 20,
+    "cover": "cat001.jpg"
+  },
+  {
+    "id": "044464F",
+    "name": "貝貝",
+    "price": 15,
+    "cover": "cat002.jpg"
+  },
+  {
+    "id": "A6245B4",
+    "name": "老虎",
+    "price": 10,
+    "cover": "cat003.jpg"
+  },
+  {
+    "id": "09DC594",
+    "name": "胖胖",
+    "price": 8.5,
+    "cover": "cat004.jpg"
+  },
+  {
+    "id": "AAE759E",
+    "name": "小花",
+    "price": 9.99,
+    "cover": "cat005.jpg"
+  },
+  {
+    "id": "D014739",
+    "name": "黑臉",
+    "price": 12.5,
+    "cover": "cat006.jpg"
+  }
+]
